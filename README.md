@@ -1,4 +1,4 @@
-# ANIME DATABASE ![Gojo Logo](/Anime%20Database%20-24/public/img/assets/logo.svg=100x100)
+# ANIME DATABASE
 
 ## INTRODUCTION
 
