@@ -1,0 +1,123 @@
+/* RESETTING DEFAULT STYLE */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLOR */
+  --background-color: #f29d35;
+  --secondary-color: #0d0d0d;
+  --dark: #010101;
+  --light: #fff;
+  --btn-color: #62190b;
+  /* FONT */
+  --ff: Kufam, sans-serif;
+  --fs: 1rem;
+  --fs-xl: 3rem;
+  /* GENERAL */
+  --padding: 0 2rem;
+}
+
+/* MIXINS */
+/* BODY */
+body {
+  background-color: var(--background-color);
+}
+
+/* NAVBAR */
+.nav {
+  background: var(--dark);
+  padding: 1.5em;
+  width: 100%;
+}
+
+.logo {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--light);
+  list-style-type: none;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--ff);
+  font-size: var(--fs);
+}
+
+nav a {
+  display: block;
+  padding: var(--padding);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.left-item {
+  padding: 0 0.3rem;
+  margin-inline-end: auto;
+}
+
+/* HERO */
+.hero-carousel {
+  background-color: #010101;
+  height: 60vh;
+  width: 100%;
+  position: relative;
+}
+
+.hero-tabs input {
+  visibility: hidden;
+  display: none;
+}
+
+/* NEWS FEED */
+/* ANIME CONTENT */
+/* #NOTE this turns the anime-cards into a responsive grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+  text-align: center;
+}
+
+.anime-card {
+  background: var(--light);
+  border-radius: 5% 5% 0 0;
+}
+
+.anime-image {
+  border-radius: 5% 5% 0 0;
+  object-fit: contain;
+  width: 100%;
+}
+
+/* #NOTE Adding padding from news feed through main from left-right  */
+.news-feed,
+.anime-container {
+  padding: var(--padding);
+}
+
+/* FOOTER */
+.footer-section {
+  background: var(--dark);
+  color: var(--light);
+}
+
+/*# sourceMappingURL=style.css.map */

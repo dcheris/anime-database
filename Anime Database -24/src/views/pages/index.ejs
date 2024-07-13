@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Database</title>
+     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/index.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--HEADER-->
+    <header class="header-main">
+        <div class="header-main-logo logo-container left-item ">
+            <a href="/">
+          <img src="/img/assets/logo.svg" alt="anime-database-logo" class="logo">
+            </a>
+        </div>
+    <!--NAVBAR-->
+         <nav class="header-main-nav">
+            <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="/src/views/pages/index.ejs">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/src/views/pages/index.ejs">Browse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/src/views/pages/index.ejs">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/src/views/pages/index.ejs">Register</a>
+                    </li>
+                </ul>
+        </nav>
+        <!--NAVBAR ENDS-->
+         <div class="header-main-search">
+            <form action="#" class="search-form">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #010101;"></i>               
+                </button>
+            </form>
+        </div>
+    </header>
+    <!--HEADER ENDS-->
+
+    <main>
+    <!--HERO CAROUSEL-->
+       <div class="hero-carousel" id="carousel" role="region" aria-labelledby="hero-carousel-title">
+        <!-- #FIXME NEED THIS TO ITERATE OVER CAROUSEL DATA. FIRST, NEED TO CREATE FUNCTION FOR TRENDING ANIME -->
+            <h2 id="hero-carousel-title">NEW ANIME</h2>
+            <% attributes.forEach(anime => { %>
+                <div class="hero-carousel-item active-carousel-item" role="tabpanel" aria-labelledby="hero-carousel-item-1-title">
+                    <div class="hero-item-content">
+                        <h3 id="hero-carousel-slide-1-title">Bleach</h3>
+                        <img src="<%=anime.image%>" alt="" class="hero-image">
+                         <div class="carousel-caption">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div> 
+                    </div>
+                </div>
+                <% }) %>
+                <div class="hero-carousel-item" role="tabpanel" aria-labelledby="hero-carousel-item-2-title">
+                    <div class="hero-item-content">
+                        <h3 id="hero-carousel-slide-2-title">Naruto</h3>
+                        <img src="https://facts.net/wp-content/uploads/2023/09/17-facts-about-kankuro-naruto-1694078215.jpg" alt="" class="hero-image">
+                    <div class="carousel-caption">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="hero-carousel-item" role="tabpanel" aria-labelledby="hero-carousel-item-3-title">
+                    <div class="hero-item-content">
+                        <h3 id="hero-carousel-slide-3-title">Attack on Titan</h3>
+                        <img src="https://facts.net/wp-content/uploads/2023/05/Naruto.jpeg" alt="" class="hero-image">
+                    <div class="carousel-caption">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="hero-carousel-item" role="tabpanel" aria-labelledby="hero-carousel-item-4-title">
+                    <div class="hero-item-content">
+                        <h3 id="hero-carousel-slide-4-title">Fruits Basket</h3>
+                        <img src="https://facts.net/wp-content/uploads/2023/09/16-facts-about-zabuza-momochi-naruto-1693565840.jpg" alt="" class="hero-image">
+                    <div class="carousel-caption">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="hero-carousel-actions">
+                    <button  id="carousel-btn-prev">
+                        <i class="fa-solid fa-chevron-left" aria-label="previous slide" style="color: #010101;"></i>
+                    </button>
+                    <button  id="carousel-btn-next">
+                        <i class="fa-solid fa-chevron-right" aria-label="next slide" style="color: #010101;"></i>
+                    </button>
+                </div>
+        </div>
+    <!--HERO CAROUSEL ENDS-->
+
+    <!-- NEWS FEED -->
+    <section class="news-feed">
+        <h1>NEWS FEED</h1>
+    </section>
+     <!-- NEWS FEED ENDS-->
+
+    <!--MAIN-->
+    <section class="anime-container">
+        <div class="grid">
+            <% attributes.forEach(anime => { %>
+            <div class="anime-card">
+                <img src="<%=anime.image%>" class="anime-image">
+                <h3 class="anime-title"><%=anime.title%></h3>
+            </div>
+            <% }) %>
+        </div>
+    </section>
+    </main>
+     <!--MAIN ENDS-->
+
+    <!--FOOTER-->
+    <footer class="footer-section">
+            <h1>FOOTER</h1>
+    </footer>
+    <!--FOOTER ENDS-->
+
+  <script src="https://kit.fontawesome.com/9000086a2a.js" crossorigin="anonymous" async></script>
+    <script defer src="/js/index.js"></script>
+</body>
+</html>
