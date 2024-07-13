@@ -1,4 +1,4 @@
-# ANIME DATABASE <img src="/dcheris/personal-site/raw/main/Anime%20Database%20-24/public/img/assets/logo.svg" alt="Gojo Logo" width="100">
+# ANIME DATABASE ![Gojo Logo](/Anime%20Database%20-24/public/img/assets/logo.svg=100x100)
 
 ## INTRODUCTION
 
